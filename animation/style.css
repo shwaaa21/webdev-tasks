@@ -1,0 +1,70 @@
+body {
+    background: url(https://cdn.pixabay.com/photo/2016/01/14/20/27/fan-art-1140718_960_720.png);
+    background-size: cover;
+    overflow: hidden;
+}
+
+#homer {
+    animation: bart_strangle 3.5s steps(5);
+    animation-iteration-count: 5;
+    animation-delay: 1s;
+    position: absolute;
+    top: 55%;
+    left: 60%;
+    transform: scale(1.6);
+    background: url(bart_strangle_image.png);
+    width: calc(574px / 5);
+    height: 125px;
+}
+
+#maggie {
+    animation: maggie_ball 3s steps(4) infinite,
+        maggie_crawl 38s infinite;
+        animation-delay: 0.5s;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    background: url(maggie_ball1.png);
+    width: calc(247px / 4);
+    height: 80px;
+}
+
+@keyframes bart_strangle {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -574px;
+    }
+}
+
+@keyframes maggie_ball {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: -247px;
+    }
+}
+
+@keyframes maggie_crawl {
+    0% {
+        transform: translate(0px);
+    }
+
+    100% {
+        transform: translate(1500px, 500px);
+    }
+}
+/* 
+@keyframes maggie_crawl {
+    0% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(0.9);
+    }
+} */
