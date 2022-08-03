@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #151515;
+    height: 100vh;
+    padding: 5px;
+
+}
+
+.scene {
+    width: 100vw;
+    height: 100%;
+    background-image: url(img/background.png);
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.scene img {
+    position: absolute;
+}
+
+.moon {
+    bottom: -100px;
+    right: -60px;
+    width: 600px;
+    animation: moon-spin 20s linear infinite;
+}
+
+.astro {
+    top: 300px;
+    right: 500px;
+    width: 10%;
+    animation: astro-float 10s linear forwards infinite;
+}
+
+.stars {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: star-rotate 30s infinite forwards;
+}
+
+.ship {
+    top: 50px;
+    left: 300px;
+    width: 150px;
+    transform: scale(0);
+    animation: ship-zoom 8s forwards infinite;
+}
+
+.comet {
+top: 200px;
+animation: comet-fly 4s linear forwards;
+}
+
+
+@keyframes star-rotate {
+    to {
+        transform: rotate(-50deg);
+    }
+}
+
+@keyframes moon-spin {
+    to {
+        transform: rotate(-100deg);
+    }
+}
+
+@keyframes astro-float {
+    to {
+        transform: rotate(360deg) translate(-400px, -200px);
+    }
+}
+
+@keyframes ship-zoom {
+    25% {
+        transform: scale(0.5) translate(-150px, 200px);
+    }
+
+    50% {
+        transform: scale(2) translate(-200px, 300px);
+    }
+
+    100% {
+        transform: scale(6) translate(100px, 100px);
+    }
+}
+
+@keyframes comet-fly {
+    to {
+        transform: translate(400px, -100px);
+    }
+}
